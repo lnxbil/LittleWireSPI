@@ -1,0 +1,3 @@
+[submodule "external-littlewire"]
+	path = external-littlewire
+	url = https://github.com/littlewire/Little-Wire.git
