@@ -1,3 +1,4 @@
 *.dylib
 *.so
 *.o
+.DS_Store
