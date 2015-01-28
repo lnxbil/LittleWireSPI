@@ -9,6 +9,14 @@ by using Ihsan Kehribar's [LittleWire](http://littlewire.cc/) hardware/software 
 
 This approach needs approximately 1ms per SPI call, so it is not very fast (around 1 kHz), but it works.
 
+## Clone Repository
+
+This repository has submodules, so these has to be initialized after initial checkout:
+
+```
+git submodule init
+git submodule update
+```
 
 ## Installation
 
