@@ -19,7 +19,9 @@ Currently tested on Linux and MacOS:
 
 I can strongly suggest to use a fixed path for all RF24-related stuff like I did in using
 
-```/opt/LittleWirePrefix```
+```
+/opt/LittleWirePrefix
+```
 
 for all projects to get everything in one place without using ```sudo``` or running as ```root```. The only thing you need to do is creating and chowning the directory as ```root``` to your default user and stick with it.
 
