@@ -73,6 +73,7 @@ $(LIB): littlewirespi.o avr_fixes.o $(LWLIBS:%=%.o)
 	
 # clear build files
 clean:
+	rm -rf debian/liblittlewire-spi*
 	rm -rf *.o ${LIB}.*
 
 install: all install-libs install-headers
@@ -90,7 +91,6 @@ install-headers:
 
 
 # you need 'devscripts' package installed
-deb:
-	@rm -rf debian/liblittlewire-spi*
+deb: clean
 	@tar -jcf ../liblittlewirespi_1.0.orig.tar.bz2 ../LittleWireSPI
 	@debuild -i -us -uc -b
