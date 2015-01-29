@@ -87,3 +87,10 @@ install-headers:
 	@echo "[Installing Headers]"
 	@if ( test ! -d ${HEADER_DIR} ) ; then mkdir -p ${HEADER_DIR} ; fi
 	@install -m 0644 *.h ${HEADER_DIR}
+
+
+# you need 'devscripts' package installed
+deb:
+	@rm -rf debian/librf24*
+	@tar -jcf ../liblittlewirespi_1.0.orig.tar.bz2 ../LittleWireSPI
+	@debuild -i -us -uc -b

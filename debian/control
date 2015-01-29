@@ -1,0 +1,16 @@
+Source: liblittlewire-spi
+Section: devel
+Priority: optional
+Build-Depends: debhelper (>= 7), libusb-dev
+Build-Depends-Indep: 
+Maintainer: Andreas Steinel <A.Steinel@gmail.com>
+Standards-Version: 3.9.4
+Vcs-Git: git://github.com/lnxbil/LittleWireSPI
+Vcs-Browser: https://github.com/lnxbil/LittleWireSPI
+
+Package: liblittlewire-spi
+Architecture: armhf amd64 i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: SPI wrapper library for LittleWire
+  Wrapper library for providing LittleWire's SPI
+  implementation in an AVR like fashion.
