@@ -3,4 +3,6 @@
 	dh $@
 
 override_dh_auto_install:
-	make install-libs install-headers PREFIX=$(PWD)/debian/liblittlewire-spi1/usr
+	make install-libs install-headers PREFIX="$(PWD)/debian/liblittlewire-spi1/usr"
+	ln -s /usr/lib/liblittlewire-spi.so.1 "$(PWD)/debian/liblittlewire-spi1/usr/lib/liblittlewire-spi.so"
+	cp debian/overrides.lintian "$(PWD)/debian/liblittlewire-spi1/usr/share/lintian/overrides/liblittlewire-spi1"

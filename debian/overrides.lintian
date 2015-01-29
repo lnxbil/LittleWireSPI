@@ -1,0 +1,2 @@
+liblittlewire-spi1: non-dev-pkg-with-shlib-symlink usr/lib/liblittlewire-spi.so.1 usr/lib/liblittlewire-spi.so
+liblittlewire-spi1: new-package-should-close-itp-bug
