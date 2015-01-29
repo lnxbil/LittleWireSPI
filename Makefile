@@ -92,5 +92,5 @@ install-headers:
 
 # you need 'devscripts' package installed
 deb: clean
-	@tar -jcf ../liblittlewirespi_1.0.orig.tar.bz2 ../LittleWireSPI
+	@tar --exclude-vcs -jcf ../liblittlewirespi_1.0.orig.tar.bz2 ../LittleWireSPI
 	@debuild -i -us -uc -b
