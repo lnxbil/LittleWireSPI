@@ -25,14 +25,6 @@ LIB_DIR=$(PREFIX)/lib
 ifeq ($(shell uname), Linux)
 	DYN_SUFFIX=so.1
 	LINK_FORMAT=-shared -Wl,-soname,$@.$(DYN_SUFFIX)
-#	DPKG_BUILD_FLAGS_PRESENT := $(shell dpkg-buildflags --version 2>/dev/null)
-#ifdef DPKG_BUILD_FLAGS_PRESENT
-#	@echo "dpkg-buildflags present, using it"
-#	CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-#	CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
-#	CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
-#	LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
-#endif
 else ifeq ($(shell uname), Darwin)
 	DYN_SUFFIX=dylib
 	LINK_FORMAT=-shared -dynamiclib -install_name ${LIB_DIR}/${LIB}.${DYN_SUFFIX}
